@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import { View, Text, Image, StyleSheet, TextInput } from "react-native";
+import { View, Text, Image, StyleSheet, TextInput, Button } from "react-native";
 
 class Aula03 extends Component {
     render(){
@@ -10,13 +10,20 @@ class Aula03 extends Component {
                         style={ styles.logo }
                         source={require('../imagens/Logo_Bola_PNG.png')}
                     />
-                    <Text style={styles.Label}>Nome:</Text>
+                    <Text style={styles.label}>Nome:</Text>
                 <TextInput 
                     style={ styles.input}
                     />
                 <TextInput 
                     style={ styles.input}
                     />
+
+                    <Button style={ styles.botao }
+                        title="Entrar"
+                        color="green"
+                    />
+
+
             </View>
         </View>
         );
@@ -48,6 +55,11 @@ const styles = StyleSheet.create({
         height: 100,
     },
 
+    label: {
+        color: 'white',
+        flex: 1,
+    },
+
 
     input: {
         height: 40,
@@ -58,4 +70,6 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         borderRadius: 5
     },
+
+    
 });
